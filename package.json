@@ -23,7 +23,7 @@
     "vue"
   ],
   "author": "Cristopher Namchee <cristophernamchee12@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Namchee/vue-ztext/issues"
   },
