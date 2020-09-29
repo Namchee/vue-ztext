@@ -25,7 +25,7 @@ export default [
     plugins,
     output: {
       format: 'cjs',
-      file: 'dist/tetikus.cjs.js',
+      file: 'dist/vue-ztext.cjs.js',
       sourcemap: false,
       exports: 'named',
     },
@@ -36,8 +36,8 @@ export default [
     plugins,
     output: {
       format: 'umd',
-      file: 'dist/tetikus.js',
-      name: 'tetikus',
+      file: 'dist/vue-ztext.js',
+      name: 'vue-ztext',
       sourcemap: false,
       exports: 'named',
       globals: {
@@ -54,8 +54,8 @@ export default [
     ],
     output: {
       format: 'umd',
-      file: 'dist/tetikus.min.js',
-      name: 'tetikus',
+      file: 'dist/vue-ztext.min.js',
+      name: 'vue-ztext',
       sourcemap: false,
       exports: 'named',
       globals: {
@@ -69,7 +69,7 @@ export default [
     plugins,
     output: {
       format: 'esm',
-      file: 'dist/tetikus.esm.js',
+      file: 'dist/vue-ztext.esm.js',
       sourcemap: false,
     },
   },

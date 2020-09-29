@@ -2,7 +2,11 @@
   "name": "vue-ztext",
   "version": "1.0.0",
   "description": "ZText declarative component for Vue 3",
-  "main": "index.js",
+  "main": "dist/vue-ztext.cjs.js",
+  "module": "dist/vue-ztext.esm.js",
+  "unpkg": "dist/vue-ztext.min.js",
+  "cdn": "dist/vue-ztext.min.js",
+  "type": "module",
   "files": [
     "dist"
   ],

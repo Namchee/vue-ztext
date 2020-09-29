@@ -1,5 +1,6 @@
 <script lang="ts">
 import { h, defineComponent, Slot, onMounted } from 'vue';
+import { UnsupportedError } from './../../exceptions/unsupported';
 import ztextify from './../../lib/ztext';
 
 export default defineComponent({
@@ -84,7 +85,16 @@ export default defineComponent({
     const defaultSlot = (slots.default as Slot)();
 
     onMounted(() => {
-      ztextify();
+      if (
+        CSS.supports('-moz-transform-style', 'preserve-3d') ||
+        CSS.supports('-ms-transform-style", "preserve-3d') ||
+        CSS.supports('-webkit-transform-style", "preserve-3d') ||
+        CSS.supports('transform-style", "preserve-3d')
+      ) {
+        ztextify(defaultSlot[0].el, attrs);
+      } else {
+        throw new UnsupportedError();
+      }
     });
 
     return () => {
