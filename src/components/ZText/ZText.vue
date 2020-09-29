@@ -1,5 +1,5 @@
 <script lang="ts">
-import { h, defineComponent, Slot, onMounted } from 'vue';
+import { h, defineComponent, Slot, onMounted, ref } from 'vue';
 import { UnsupportedError } from './../../exceptions/unsupported';
 import ztextify from './../../lib/ztext';
 
@@ -47,13 +47,9 @@ export default defineComponent({
       type: String,
       default: 'none',
       validator: (value: string) => {
-        return [
-          'none',
-          'pointer',
-          'scroll',
-          'scrollX',
-          'scrollY',
-        ].includes(value);
+        return ['none', 'pointer', 'scroll', 'scrollX', 'scrollY'].includes(
+          value,
+        );
       },
     },
 
@@ -72,17 +68,8 @@ export default defineComponent({
   },
 
   setup(props, { slots }) {
-    const attrs: Record<string, any> = {
-      'data-z': true,
-    };
-
-    Object.keys(props)
-      .filter((val: string) => val !== 'as')
-      .forEach((val: string) => {
-        attrs[`data-z-${val}`] = val;
-      });
-
     const defaultSlot = (slots.default as Slot)();
+    const root = ref<HTMLElement | null>(null);
 
     onMounted(() => {
       if (
@@ -91,19 +78,20 @@ export default defineComponent({
         CSS.supports('-webkit-transform-style', 'preserve-3d') ||
         CSS.supports('transform-style', 'preserve-3d')
       ) {
-        ztextify(defaultSlot[0].el, attrs);
+        ztextify(root.value, props);
       } else {
         throw new UnsupportedError();
       }
     });
 
-    return () => {
+    return () =>
       h(
         props.as,
-        attrs,
+        {
+          ref: root,
+        },
         defaultSlot,
       );
-    };
   },
 });
 </script>

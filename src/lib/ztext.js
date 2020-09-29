@@ -206,3 +206,4 @@ export default function(z, options) {
     window.addEventListener("scroll", zScrollX, false);
   }
 }
+/* eslint-enable */
