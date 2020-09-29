@@ -1,10 +1,10 @@
 # vue-ztext
 
-[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts) [![Vue 3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://github.com/vuejs/vue-next)
+[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts) [![Vue 3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://github.com/vuejs/vue-next) [![Vue 3D logo](https://img.shields.io/npm/v/@namchee/vue-ztext)](https://www.npmjs.com/package/@namchee/vue-ztext)
 
-<div style="text-align: center;">
-  <img src="./docs/vue-ztext.png" title="Vue ZText" alt="Vue ZText" />
-</div>
+<p align="center">
+  <img src="./docs/vue-ztext.png" title="Vue ZText" alt="Vue ZText" width="360" height="360" />
+</p>
 
 Ztext.js custom declarative component for Vue 3. Because you deserve declarative awesomeness.
 
