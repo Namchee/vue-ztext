@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*!
  * ztext.js v0.0.1
  * https://bennettfeely.com/ztext

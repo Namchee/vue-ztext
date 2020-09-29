@@ -1,5 +1,5 @@
 {
-  "name": "vue-ztext",
+  "name": "@namchee/vue-ztext",
   "version": "1.0.0",
   "description": "ZText declarative component for Vue 3",
   "main": "dist/vue-ztext.cjs.js",
@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "build": "rm -rf dist/ && rollup -c",
-    "build:watch": "npm run build -- watch"
+    "build:watch": "npm run build -- watch",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
