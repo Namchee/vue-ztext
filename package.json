@@ -13,6 +13,7 @@
   "scripts": {
     "build": "rm -rf dist/ && rollup -c",
     "build:watch": "npm run build -- --watch",
+    "test": "yarn jest",
     "lint": "eslint"
   },
   "repository": {
@@ -34,8 +35,15 @@
     "@types/node": "^14.11.2",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/test-utils": "^2.0.0-beta.5",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "@types/moment": "^2.13.0",
+    "@vue/compiler-sfc": "^3.0.0-alpha.11",
+    "@vue/test-utils": "^2.0.0-alpha.8",
+    "babel-jest": "^25.2.6",
+    "flush-promises": "^1.0.2",
+    "ts-loader": "^6.2.2",
     "eslint": "^7.10.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-vue": "^7.0.0-beta.4",
@@ -47,9 +55,10 @@
     "rollup-plugin-vue": "^6.0.0-beta.10",
     "ts-jest": "^26.4.0",
     "typescript": "^4.0.3",
+    "vue-jest": "^5.0.0-alpha.1",
     "vue": "^3.0.0",
     "vue-eslint-parser": "^7.1.0",
-    "vue-jest": "^3.0.7"
+    "vue-loader": "^16.0.0-alpha.3"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

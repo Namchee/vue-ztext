@@ -64,7 +64,8 @@ export default defineComponent({
       validator: (value: string) => {
         return ['default', 'reverse'].includes(value);
       },
-    },
+    }
+    
   },
 
   setup(props, { slots }) {
