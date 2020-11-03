@@ -1,0 +1,4 @@
+global.CSS = {
+    supports: ()=>  true
+  };
+  

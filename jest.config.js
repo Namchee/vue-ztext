@@ -1,15 +1,10 @@
-module.exports = {
-  verbose: true,
-  moduleFileExtensions: [
-    'ts',
-    'tsx',
-    'js',
-    'json',
-    'vue',
-  ],
+export default {
+  preset: 'ts-jest',
+  "setupFiles": ["<rootDir>/private/jest/setup.js"],
+  testEnvironment: 'jsdom',
   transform: {
-    '.*\\.(vue)$': 'vue-jest',
-    '^.+\\.tsx?$': 'ts-jest',
+    "^.+\\.vue$": "vue-jest",
+    "^.+\\js$": "babel-jest"
   },
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-};
+  moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node']
+}
