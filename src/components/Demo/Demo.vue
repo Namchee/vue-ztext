@@ -1,5 +1,6 @@
 <script>
 import { defineComponent } from 'vue';
+
 import ZText from './../ZText';
 
 export default defineComponent({

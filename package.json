@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "description": "ZText declarative component for Vue 3",
   "main": "dist/vue-ztext.cjs.js",
-  "module": "dist/vue-ztext.esm.js",
-  "unpkg": "dist/vue-ztext.min.js",
-  "cdn": "dist/vue-ztext.min.js",
+  "module": "dist/vue-ztext.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-ztext.es.js",
+      "require": "./dist/vue-ztext.umd.js"
+    }
+  },
   "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "rm -rf dist/ && rollup -c",
-    "build:watch": "npm run build -- --watch",
-    "test": "jest",
-    "build:docs": "vite build",
+    "dev": "vite --config vite.config.docs.ts",
+    "build": "vite build --config vite.config.lib.ts",
+    "docs:build": "vite build --config vite.config.docs.ts",
+    "docs:preview": "vite preview --port 8080 --config vite.config.docs.ts",
     "lint": "eslint"
   },
   "repository": {
@@ -32,39 +35,22 @@
   },
   "homepage": "https://github.com/Namchee/vue-ztext#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^15.1.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
     "@types/node": "^14.11.2",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
-    "@babel/node": "^7.8.7",
-    "@babel/preset-env": "^7.9.0",
-    "@types/jest": "^25.2.1",
-    "@types/moment": "^2.13.0",
+    "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.0.2",
-    "@vue/test-utils": "^2.0.0-beta.5",
-    "babel-jest": "^25.2.6",
-    "flush-promises": "^1.0.2",
-    "ts-loader": "^6.2.2",
     "eslint": "^7.10.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-vue": "^7.0.0-beta.4",
-    "jest": "^26.4.2",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.28.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.27.3",
-    "rollup-plugin-vue": "^6.0.0-beta.10",
-    "ts-jest": "^26.4.0",
-    "typescript": "^4.0.3",
-    "vue-jest": "^5.0.0-alpha.1",
-    "vite": "^1.0.0-rc.8",
-    "vue": "^3.0.0",
-    "vue-eslint-parser": "^7.1.0",
-    "vue-loader": "^16.0.0-alpha.3"
+    "rollup-plugin-typescript2": "^0.31.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.12",
+    "vue": "^3.2.26",
+    "vue-eslint-parser": "^7.1.0"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
-  },
-  "dependencies": {}
+    "vue": "^3"
+  }
 }
