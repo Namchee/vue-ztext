@@ -1,7 +1,8 @@
 <script lang="ts">
 import { h, defineComponent, Slot, onMounted, ref } from 'vue';
-import { UnsupportedError } from './../../exceptions/unsupported';
-import ztextify from './../../lib/ztext';
+
+import { UnsupportedError } from '@/exceptions/unsupported';
+import ztextify from '@/lib/ztext';
 
 export default defineComponent({
   props: {

@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
-import Demo from './components/Demo';
+
+import { Demo } from '@/components/Demo';
 
 const app = createApp(Demo);
 
