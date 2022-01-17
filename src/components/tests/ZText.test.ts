@@ -6,10 +6,10 @@ describe('<z-text>', () => {
   it('should have <div> as default', () => {
     const wrapper = mount(ZText, {
       slots: {
-        default: '.'
-      }
+        default: '.',
+      },
     });
-  
+
     expect(wrapper.html()).toContain('div');
-  })
+  });
 });

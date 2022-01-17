@@ -4,6 +4,7 @@
   "description": "ZText declarative component for Vue 3",
   "main": "dist/vue-ztext.cjs.js",
   "module": "dist/vue-ztext.es.js",
+  "browser": "dist/vue-ztext.umd.js",
   "exports": {
     ".": {
       "import": "./dist/vue-ztext.es.js",
@@ -18,8 +19,7 @@
     "build": "vite build --config vite.config.lib.ts",
     "docs:build": "vite build --config vite.config.docs.ts",
     "docs:preview": "vite preview --port 8080 --config vite.config.docs.ts",
-    "lint": "eslint",
-    "test": "jest"
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,6 @@
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "@vitejs/plugin-vue": "^2.0.1",
-    "@vue/compiler-sfc": "^3.0.2",
     "@vue/test-utils": "^2.0.0-rc.18",
     "@vue/vue3-jest": "^27.0.0-alpha.4",
     "eslint": "^7.10.0",

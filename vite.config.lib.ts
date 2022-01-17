@@ -2,7 +2,6 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 import vue from '@vitejs/plugin-vue';
-import typescript from 'rollup-plugin-typescript2';
 
 export default defineConfig({
   build: {
@@ -24,10 +23,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    {
-      ...typescript(),
-      apply: 'build'
-    }
   ],
   resolve: {
     alias: {

@@ -13,6 +13,7 @@ export default defineComponent({
       validator: (value: string): boolean => {
         const el = document.createElement(value);
         el.innerHTML = '.';
+
         return !!el.innerHTML;
       },
     },
@@ -66,8 +67,7 @@ export default defineComponent({
       validator: (value: string) => {
         return ['default', 'reverse'].includes(value);
       },
-    }
-    
+    },
   },
 
   setup(props, { slots }) {
