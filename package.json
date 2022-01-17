@@ -10,7 +10,6 @@
       "require": "./dist/vue-ztext.umd.js"
     }
   },
-  "type": "module",
   "files": [
     "dist"
   ],
@@ -20,6 +19,7 @@
     "docs:build": "vite build --config vite.config.docs.ts",
     "docs:preview": "vite preview --port 8080 --config vite.config.docs.ts",
     "lint": "eslint",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

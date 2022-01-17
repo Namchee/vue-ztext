@@ -1,6 +1,6 @@
 import { App } from 'vue';
 
-import { ZText } from '@/components/ZText';
+import ZText from '@/components/ZText.vue';
 
 export default {
   install(app: App): void {
