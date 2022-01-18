@@ -1,10 +1,7 @@
-import { App } from 'vue';
-import ZText from './components/ZText';
+import { createApp } from 'vue';
 
-export default {
-  install(app: App): void {
-    app.component('z-text', ZText);
-  },
-};
+import Demo from '@/components/Demo.vue';
 
-export { ZText };
+const app = createApp(Demo);
+
+app.mount('#app');
